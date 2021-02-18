@@ -1,4 +1,4 @@
-# alex3397.github.io
-Portfolio
+# Alexandre Guimarães
+Java Spring Boot + ReactJS/NextJS FullStack Web Developer
 
-Link: https://alex3397.github.io/
+Portfolio Link: https://alex3397.github.io/
