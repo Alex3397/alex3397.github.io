@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman";
+}
+
+.header {
+    background-color: #303030;
+    height: 250px;
+}
+.header-upper {
+    margin: auto;
+    text-align: center;
+    border-bottom: 1px solid #474747;
+    padding-bottom: 20px;
+}
+
+.image {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 9999px;
+    position: relative;
+    top: 30px;
+}
+.name {
+    font-weight: bold;
+    position: relative;
+    top : 15px;
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+.role {
+    color: white;
+    letter-spacing: 3px;
+    font-size: 10px;
+}

@@ -1,4 +1,4 @@
 # Alexandre Guimarães
-Java Spring Boot + ReactJS/NextJS FullStack Web Developer
+Java Spring Boot FullStack Web Developer
 
-Portfolio Link: https://alex3397.github.io/
+Curriculum Link: https://alex3397.github.io/
