@@ -1,23 +1,25 @@
+@page { size: auto;  margin: 0mm; }
 body {
     margin: 0;
     padding: 0;
     font-family: "Times New Roman";
+    background-color: #C7CAB9;
 }
 
 .header {
     background-color: #303030;
-    height: 250px;
+    color: white;
+    border-bottom: 1px solid #474747;
 }
 .header-upper {
     margin: auto;
     text-align: center;
     border-bottom: 1px solid #474747;
-    padding-bottom: 20px;
 }
 
 .image {
-    height: 6rem;
-    width: 6rem;
+    height: 12rem;
+    width: 12rem;
     border-radius: 9999px;
     position: relative;
     top: 30px;
@@ -26,12 +28,111 @@ body {
     font-weight: bold;
     position: relative;
     top : 15px;
-    color: white;
-    font-size: 35px;
+    font-size: 40px;
     letter-spacing: 1px;
 }
 .role {
-    color: white;
     letter-spacing: 3px;
-    font-size: 10px;
+    font-size: 14px;
 }
+
+.details {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.details-items {
+    margin: 0px 55px 15px 55px;
+    text-align: center;
+}
+
+.header-lower {
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    width: 50%;
+}
+.header-lower-items {
+    margin: 15px;
+    width: 100%;
+    text-align: center;
+}
+.content {
+    margin: 0px auto 0px auto;
+    justify-content: center;
+    width: 80%;
+    padding-bottom: 100px;
+}
+.main-content {
+    margin-right: 20%;
+}
+.side-bar {
+    width: 17.5%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    color: #c5cdd5;
+}
+.links-container {
+    background-color: #0d1117;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 12px;
+}
+.links-title {
+    margin-top: 0;
+}
+.link {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.project-container {
+    background-color: #0d1117;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 12px;
+}
+.project-title {
+    margin-top: 0;
+}
+.project-image {
+
+}
+.project-description {
+
+}
+.profile-container {
+
+}
+.profile-title {
+
+}
+.profile-description {
+
+}
+.employment-container {
+
+}
+.employment-title {
+
+}
+.employment-details {
+
+}
+.employment-job {
+    margin-bottom: 0px;
+}
+.employment-time {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.employment-summary {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
