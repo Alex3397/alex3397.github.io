@@ -71,7 +71,6 @@ body {
 }
 .side-bar {
     width: 17.5%;
-    height: 100%;
     position: absolute;
     right: 0;
     margin-right: 9%;
@@ -131,5 +130,28 @@ body {
 .employment-summary {
     margin-bottom: 0px;
     margin-top: 0px;
+}
+.skill-name {
+    margin: 0;
+}
+.skill-level {
+    margin: 0;
+}
+.line-current {
+    position: relative;
+    top: -6px;
+    width: 75%;
+    height: 6px;
+    background-color: #47819A;
+    margin: 0;
+    border-radius: 5px;
+}
+.line-base {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #cbd3e2;
+    margin: 0;
+    border-radius: 5px;
 }
 
