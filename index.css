@@ -137,12 +137,39 @@ body {
 .skill-level {
     margin: 0;
 }
-.line-current {
+.line-current-25 {
+    position: relative;
+    top: -6px;
+    width: 25%;
+    height: 6px;
+    background-color: purple;
+    margin: 0;
+    border-radius: 5px;
+}
+.line-current-50 {
+    position: relative;
+    top: -6px;
+    width: 50%;
+    height: 6px;
+    background-color: #FF4733;
+    margin: 0;
+    border-radius: 5px;
+}
+.line-current-75 {
     position: relative;
     top: -6px;
     width: 75%;
     height: 6px;
-    background-color: #47819A;
+    background-color: blue;
+    margin: 0;
+    border-radius: 5px;
+}
+.line-current-100 {
+    position: relative;
+    top: -6px;
+    width: 100%;
+    height: 6px;
+    background-color: #ffba1a;
     margin: 0;
     border-radius: 5px;
 }
