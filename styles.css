@@ -38,18 +38,27 @@ body {
   margin-bottom: 36px;
   color: #e7d3ac;
 
-  /* Fundo gradiente base estável */
+  /* Mantém os seus fundos gradientes originais intactos */
   background:
+    linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.18) 48%, rgba(255, 255, 255, 0.32) 50%, rgba(255, 255, 255, 0.18) 52%, transparent 60%),
     radial-gradient(ellipse at top right, rgba(184, 145, 42, 0.25), transparent 70%),
     linear-gradient(135deg, #13120f 0%, #252019 100%);
-  background-size: 100% 100%;
 
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.35),
-    0 2px 6px rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid #b8912a;
+  background-size: 200% 100%, 100% 100%, 100% 100%;
+  background-position: 200% 0, 0 0, 0 0;
+  background-repeat: no-repeat;
+
+  border: 1px solid #b8912a;
+  /* Aumentado para 2px para dar mais destaque */
   border-radius: 16px;
   overflow: hidden;
+
+  /* Três animações rodando juntas de forma sutil e contínua */
+  animation:
+    fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    shineEsporadico 12s linear infinite,
+    bordaGlowMutavel 24s ease-in-out infinite;
+  /* Nova animação de cor e brilho */
 }
 
 /* Elemento Gráfico 1: Moldura interna sutil */
@@ -63,7 +72,10 @@ body {
   border: 1px solid rgba(184, 145, 42, 1);
   border-radius: 12px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
+  /* Fica acima de tudo, inclusive dos textos */
+  overflow: hidden;
+  /* Garante que o feixe não vaze da moldura */
 }
 
 /* Elemento Gráfico 2: TEXTURA HOLOGRÁFICA OTIMIZADA (Preserva 100% da leitura à esquerda) */
@@ -237,6 +249,41 @@ body {
 /* ================= SEÇÕES ================= */
 .secao {
   margin-bottom: 36px;
+  opacity: 0;
+  /* Começa invisível e surge com a animação */
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.secao:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.secao:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.secao:nth-child(3) {
+  animation-delay: 0.35s;
+}
+
+.secao:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+.secao:nth-child(5) {
+  animation-delay: 0.55s;
+}
+
+.secao:nth-child(6) {
+  animation-delay: 0.65s;
+}
+
+.secao:nth-child(7) {
+  animation-delay: 0.75s;
+}
+
+.secao:nth-child(8) {
+  animation-delay: 0.85s;
 }
 
 .secao:last-child {
@@ -635,6 +682,82 @@ body {
   }
 }
 
+/* ================= ANIMAÇÕES ================= */
+
+/* 1. Definição dos Keyframes (Core) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shineEsporadico {
+  0% {
+    /* Mantém o feixe escondido na posição inicial */
+    background-position: 200% 0, 0 0, 0 0;
+  }
+
+  20% {
+    /* Faz o feixe cruzar até o outro lado rapidamente (~0.5s) */
+    background-position: -120% 0, 0 0, 0 0;
+  }
+
+  100% {
+    /* Segura o feixe estático e invisível até completar o ciclo de 18 segundos */
+    background-position: -120% 0, 0 0, 0 0;
+  }
+}
+
+@keyframes bordaGlowMutavel {
+
+  0%,
+  100% {
+    border-color: #b8912a;
+    /* Dourado original */
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.35),
+      0 2px 6px rgba(0, 0, 0, 0.2),
+      0 4px 20px rgba(184, 145, 42, 0.25),
+      /* Brilho externo dourado */
+      inset 0 0 15px rgba(194, 165, 78, 0.6),
+      /* Camada interna 1 */
+      inset 0 0 50px rgba(194, 165, 78, 0.25);
+    /* Camada interna 2 */
+  }
+
+  33% {
+    border-color: #eb5a5a;
+    /* Rubi/Vermelho (puxado do seu gradiente holográfico) */
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.35),
+      0 2px 6px rgba(0, 0, 0, 0.2),
+      0 4px 25px rgba(235, 90, 90, 0.4),
+      /* Brilho externo rubi forte */
+      inset 0 0 20px rgba(235, 90, 90, 0.7),
+      /* Camada interna rubi */
+      inset 0 0 60px rgba(235, 90, 90, 0.3);
+  }
+
+  66% {
+    border-color: #b24bc0;
+    /* Ciano/Turquesa suave (da sua malha holográfica) */
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.35),
+      0 2px 6px rgba(0, 0, 0, 0.2),
+      0 4px 25px rgba(155, 75, 192, 0.377),
+      /* Brilho externo ciano forte */
+      inset 0 0 20px rgba(192, 75, 130, 0.7),
+      /* Camada interna ciano */
+      inset 0 0 60px rgba(192, 75, 182, 0.329);
+  }
+}
+
 /* ================= IMPRESSÃO (PDF) ================= */
 @media print {
 
@@ -709,5 +832,15 @@ body {
   .lista-links a {
     border: 1px solid #c8bda0;
     background: transparent;
+  }
+
+  /* Proteção para o modo de impressão (PDF) */
+  .cabecalho {
+    animation: none !important;
+    background-position: 200% 0, 0 0, 0 0 !important;
+    border-color: #b8912a !important;
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.35),
+      0 2px 6px rgba(0, 0, 0, 0.2) !important;
   }
 }
