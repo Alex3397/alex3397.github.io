@@ -36,29 +36,25 @@ body {
   gap: 36px;
   padding: 42px 48px;
   margin-bottom: 36px;
-  color: #e7d3ac;
+  color: #f3e5c8;
 
-  /* Mantém os seus fundos gradientes originais intactos */
-  background:
-    linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.18) 48%, rgba(255, 255, 255, 0.32) 50%, rgba(255, 255, 255, 0.18) 52%, transparent 60%),
-    radial-gradient(ellipse at top right, rgba(184, 145, 42, 0.25), transparent 70%),
-    linear-gradient(135deg, #13120f 0%, #252019 100%);
+  /* Fundo preto premium com degradê suave e as linhas douradas diagonais idênticas ao cartão */
+  background: 
+    /* Linha Dourada Diagonal*/
+    linear-gradient(145deg, transparent 85%, #b3862b 85%, #f9e7b9 87%, #cfa343 88%, transparent 88%),
+    /* Base escura do cartão */
+    radial-gradient(circle at top left, #1c1c1c 0%, #111111 100%);
 
-  background-size: 200% 100%, 100% 100%, 100% 100%;
-  background-position: 200% 0, 0 0, 0 0;
-  background-repeat: no-repeat;
-
-  border: 1px solid #b8912a;
-  /* Aumentado para 2px para dar mais destaque */
+  border: 1px solid #b3862b;
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 
   /* Três animações rodando juntas de forma sutil e contínua */
   animation:
     fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
     shineEsporadico 12s linear infinite,
     bordaGlowMutavel 24s ease-in-out infinite;
-  /* Nova animação de cor e brilho */
 }
 
 /* Elemento Gráfico 1: Moldura interna sutil estilo Alta Joalheria */
@@ -126,37 +122,114 @@ body {
   z-index: 1;
 }
 
-/* Ajuste fino dos textos para flutuarem com nitidez acima da malha */
+/* Camada da textura geométrica escura de fundo (Arabescos do cartão) */
+.cabecalho::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  
+  /* Padrão geométrico sutil em SVG (grid de losangos/flores do cartão) */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsPSIjMWExYTFhIiBmaWxsLW9wYWNpdHk9IjAuNiI+PHBhdGggZD0iTTIwIDBMMTAgMTBMMCAwTDEwLTEwek0yMCA0MEwzMCAzMEw0MCA0MEwzMCA5MHpNMCAyMEwxMCAzMEwwIDQwTC0xMCAzMHpNMzAgMTBMMjAgMjBMMzAgMzBMMzAgMTB6Ii8+PHBhdGggZD0iTTIwIDIwTDEwIDEwTDAgMjBMMTAgMzB6TTQwIDIwTDMwIDEwTDIwIDIwTDMwIDMweiIvPjwvZz48L3N2Zz4=");
+  background-size: 24px 24px;
+  opacity: 0.85;
+  
+  /* Máscara para suavizar o padrão sob os textos principais */
+  mask-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* TEXTURA HOLOGRÁFICA OTIMIZADA + Molduras Douradas por CIMA do efeito de máscara */
+.cabecalho::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+
+  /* Mantém as suas cores e reflexos holográficos prediletos */
+  background-image:
+    linear-gradient(105deg,
+      rgba(184, 145, 42, 0.20) 0%,
+      /* Ouro sutil */
+      rgba(235, 90, 90, 0.12) 20%,
+      /* Rubi suave */
+      rgba(75, 192, 192, 0.12) 40%,
+      /* Ciano suave */
+      rgba(255, 235, 180, 0.15) 55%,
+      /* Ouro Branco */
+      rgba(150, 60, 255, 0.14) 70%,
+      /* Violeta contido */
+      rgba(120, 30, 220, 0.08) 85%,
+      transparent 100%),
+    linear-gradient(125deg,
+      rgba(184, 145, 42, 0.1) 0%,
+      rgba(255, 245, 220, 0.05) 35%,
+      rgba(255, 255, 255, 0.20) 45%,
+      /* Feixe de luz metálica polido */
+      rgba(255, 245, 220, 0.05) 55%,
+      transparent 100%),
+    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im0iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmNWQwIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNiODkxMmEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2MTQ5MWMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBmaWxsPSJ1cmwoI20pIiBmaWxsLW9wYWNpdHk9IjAuMjIiPjxwYXRoIGQ9Ik0xOSA0YTE1IDE1IDAgMCAwLTE1IDE1aDE1em0yIDBhMTUgMTUgMCAwIDEgMTUgMTVIMjF6bS0xNyAxN2ExNSAxNSAwIDAgMCAxNSAxNVYyMXptMTkgMTVhMTUgMTUgMCAwIDAgMTUtMTVIPjF6bS03LTEyYTUgNSAwIDEgMSA1LTVhNSA1IDAgMCAxLTUgNXoiLz48L2c+PC9zdmc+");
+
+  background-size: 150% 100%, 100% 100%, 12px 12px;
+  background-repeat: no-repeat, no-repeat, repeat;
+  border-radius: 10px;
+
+  filter:
+    drop-shadow(0px -0.5px 0.5px rgba(255, 255, 255, 0.2)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.55));
+
+  /* A máscara limpa o padrão e o brilho holográfico do lado esquerdo */
+  mask-image: linear-gradient(115deg, transparent 35%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.95) 85%);
+  -webkit-mask-image: linear-gradient(115deg, transparent 35%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.95) 85%);
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Ajuste de contraste dos textos sobre o fundo preto absoluto */
 .cabecalho h1 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.05;
-  color: #f2e4c2;
+  color: #f9e7b9; /* Tom dourado champagne idêntico ao logo do cartão */
   margin-bottom: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  /* Melhora leitura do nome */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Camada da Linha Secundária Fantasma (Outline Interno) rodando em Z-INDEX alto para ignorar a máscara */
+.cabecalho h1::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 1px solid rgba(184, 146, 42, 0.7);
+  outline: 1px solid rgba(184, 146, 42, 0.4);
+  outline-offset: -5px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 4;
 }
 
 .foto {
   width: 140px;
   height: 185px;
   flex-shrink: 0;
-  border-radius: 4px;
-  background-color: #2a2620;
-  border: 1px solid #b8912a;
-  outline: 1px solid rgba(184, 145, 42, 0.5);
-  outline-offset: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #8a7d5c;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  border-radius: 6px;
+  background-color: #111;
+  border: 1px solid #cfa343;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
 }
 
 .foto img {
@@ -169,7 +242,7 @@ body {
 .info-principal {
   flex: 1;
   min-width: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 .cargo {
@@ -178,12 +251,10 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #b8912a;
+  color: #cfa343;
   margin: 0;
   padding-top: 10px;
-  position: relative;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-  /* Melhora leitura do cargo */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .info-principal h1+.cargo::after {
@@ -191,7 +262,7 @@ body {
   display: block;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(184, 145, 42, 0.6), transparent);
+  background: linear-gradient(90deg, rgba(207, 163, 67, 0.6), transparent);
   margin-top: 14px;
 }
 
@@ -225,6 +296,13 @@ body {
   transition: color 0.2s ease;
 }
 
+.contato li, .contato a {
+  font-size: 12.5px;
+  color: #e4dec9;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+}
+
 .contato a:hover {
   color: #e4d8c3;
   text-decoration: none;
@@ -239,12 +317,9 @@ body {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
-  stroke: #b8912a;
+  stroke: #cfa343;
   fill: none;
   stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  opacity: 0.9;
 }
 
 /* ================= SEÇÕES ================= */
