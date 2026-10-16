@@ -58,7 +58,7 @@ body {
     margin-bottom: 0;
 }
 
-.info-principal::before {
+.cabecalho::before {
     content: "";
     position: absolute;
     top: 16px;
