@@ -61,21 +61,22 @@ body {
   /* Nova animação de cor e brilho */
 }
 
-/* Elemento Gráfico 1: Moldura interna sutil */
+/* Elemento Gráfico 1: Moldura interna sutil estilo Alta Joalheria */
 .cabecalho::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border: 1px solid rgba(184, 145, 42, 1);
-  border-radius: 12px;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  /* Cria uma linha fina principal e uma linha secundária fantasma (outline) parecendo uma moldura dupla luxuosa */
+  border: 1px solid rgba(184, 146, 42, 0.7);
+  outline: 1px solid rgba(184, 146, 42, 0.4);
+  outline-offset: -5px;
+  border-radius: 10px;
   pointer-events: none;
   z-index: 3;
-  /* Fica acima de tudo, inclusive dos textos */
   overflow: hidden;
-  /* Garante que o feixe não vaze da moldura */
 }
 
 /* Elemento Gráfico 2: TEXTURA HOLOGRÁFICA OTIMIZADA (Preserva 100% da leitura à esquerda) */
