@@ -807,41 +807,6 @@ body {
     print-color-adjust: exact !important;
   }
 
-  body {
-    padding: 0;
-    margin: 0;
-    background: #efe9dc !important;
-    font-size: 10pt;
-    line-height: 1.4;
-  }
-
-  .cv {
-    max-width: 100%;
-    margin: 0;
-    padding: 20px 28px;
-    box-shadow: none;
-    border-radius: 0;
-    background: #efe9dc !important;
-  }
-
-  /* Preserva o cabeçalho escuro */
-  .cabecalho {
-    box-shadow: none;
-    page-break-inside: avoid;
-    page-break-after: avoid;
-    padding: 28px 32px;
-    margin-bottom: 24px;
-  }
-
-  .cabecalho h1 {
-    font-size: 24pt;
-  }
-
-  .foto {
-    width: 110px;
-    height: 145px;
-  }
-
   /* Impede que títulos fiquem órfãos no fim da página */
   .secao h2 {
     page-break-after: avoid;
@@ -861,26 +826,5 @@ body {
   /* Item muito longo (Ília) pode quebrar entre páginas */
   .item:has(li:nth-child(5)) {
     page-break-inside: auto;
-  }
-
-  /* Links não sublinhados */
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .lista-links a {
-    border: 1px solid #c8bda0;
-    background: transparent;
-  }
-
-  /* Proteção para o modo de impressão (PDF) */
-  .cabecalho {
-    animation: none !important;
-    background-position: 200% 0, 0 0, 0 0 !important;
-    border-color: #b8912a !important;
-    box-shadow:
-      0 8px 24px rgba(0, 0, 0, 0.35),
-      0 2px 6px rgba(0, 0, 0, 0.2) !important;
   }
 }
