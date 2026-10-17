@@ -38,88 +38,20 @@ body {
   margin-bottom: 36px;
   color: #f3e5c8;
 
-  /* Fundo preto premium com degradê suave e as linhas douradas diagonais idênticas ao cartão */
-  background: 
-    /* Linha Dourada Diagonal*/
-    linear-gradient(145deg, transparent 85%, #b3862b 85%, #f9e7b9 87%, #cfa343 88%, transparent 88%),
+  /* Base escura do cartão com um degradê premium refinado */
+  background:
     /* Base escura do cartão */
-    radial-gradient(circle at top left, #1c1c1c 0%, #111111 100%);
+    radial-gradient(circle at left center, #1c1c1c 0%, #111111 100%);
 
-  border: 1px solid #b3862b;
+  /* Borda principal e uma borda inferior dourada um pouco mais espessa para dar base ao design */
+  border: 1.5px solid #b3862b;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 
-  /* Três animações rodando juntas de forma sutil e contínua */
+  /* Duas animações principais rodando na base estrutural */
   animation:
     fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
-    shineEsporadico 12s linear infinite,
     bordaGlowMutavel 24s ease-in-out infinite;
-}
-
-/* Elemento Gráfico 1: Moldura interna sutil estilo Alta Joalheria */
-.cabecalho::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  /* Cria uma linha fina principal e uma linha secundária fantasma (outline) parecendo uma moldura dupla luxuosa */
-  border: 1px solid rgba(184, 146, 42, 0.7);
-  outline: 1px solid rgba(184, 146, 42, 0.4);
-  outline-offset: -5px;
-  border-radius: 10px;
-  pointer-events: none;
-  z-index: 3;
-  overflow: hidden;
-}
-
-/* Elemento Gráfico 2: TEXTURA HOLOGRÁFICA OTIMIZADA (Preserva 100% da leitura à esquerda) */
-.cabecalho::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  /* Mantém as suas cores e reflexos holográficos prediletos */
-  background-image:
-    linear-gradient(105deg,
-      rgba(184, 145, 42, 0.20) 0%,
-      /* Ouro sutil */
-      rgba(235, 90, 90, 0.12) 20%,
-      /* Rubi suave */
-      rgba(75, 192, 192, 0.12) 40%,
-      /* Ciano suave */
-      rgba(255, 235, 180, 0.15) 55%,
-      /* Ouro Branco */
-      rgba(150, 60, 255, 0.14) 70%,
-      /* Violeta contido */
-      rgba(120, 30, 220, 0.08) 85%,
-      transparent 100%),
-    linear-gradient(125deg,
-      rgba(184, 145, 42, 0.1) 0%,
-      rgba(255, 245, 220, 0.05) 35%,
-      rgba(255, 255, 255, 0.20) 45%,
-      /* Feixe de luz metálica polido */
-      rgba(255, 245, 220, 0.05) 55%,
-      transparent 100%),
-    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im0iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmNWQwIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNiODkxMmEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2MTQ5MWMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBmaWxsPSJ1cmwoI20pIiBmaWxsLW9wYWNpdHk9IjAuMjIiPjxwYXRoIGQ9Ik0xOSA0YTE1IDE1IDAgMCAwLTE1IDE1aDE1em0yIDBhMTUgMTUgMCAwIDEgMTUgMTVIMjF6bS0xNyAxN2ExNSAxNSAwIDAgMCAxNSAxNVYyMXptMTkgMTVhMTUgMTUgMCAwIDAgMTUtMTVIPjF6bS03LTEyYTUgNSAwIDEgMSA1LTVhNSA1IDAgMCAxLTUgNXoiLz48L2c+PC9zdmc+");
-
-  background-size: 150% 100%, 100% 100%, 12px 12px;
-  background-repeat: no-repeat, no-repeat, repeat;
-
-  filter:
-    drop-shadow(0px -0.5px 0.5px rgba(255, 255, 255, 0.2)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.55));
-
-  /* CORREÇÃO DO FLUXO: A máscara agora limpa o padrão completamente debaixo da foto e dos textos da esquerda */
-  mask-image: linear-gradient(115deg, transparent 35%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.95) 85%);
-  -webkit-mask-image: linear-gradient(115deg, transparent 35%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.95) 85%);
-
-  pointer-events: none;
-  z-index: 1;
 }
 
 /* Camada da textura geométrica escura de fundo (Arabescos do cartão) */
@@ -130,21 +62,15 @@ body {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  
+
   /* Padrão geométrico sutil em SVG (grid de losangos/flores do cartão) */
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsPSIjMWExYTFhIiBmaWxsLW9wYWNpdHk9IjAuNiI+PHBhdGggZD0iTTIwIDBMMTAgMTBMMCAwTDEwLTEwek0yMCA0MEwzMCAzMEw0MCA0MEwzMCA5MHpNMCAyMEwxMCAzMEwwIDQwTC0xMCAzMHpNMzAgMTBMMjAgMjBMMzAgMzBMMzAgMTB6Ii8+PHBhdGggZD0iTTIwIDIwTDEwIDEwTDAgMjBMMTAgMzB6TTQwIDIwTDMwIDEwTDIwIDIwTDMwIDMweiIvPjwvZz48L3N2Zz4=");
-  background-size: 24px 24px;
-  opacity: 0.85;
-  
-  /* Máscara para suavizar o padrão sob os textos principais */
-  mask-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
-  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
-  
-  pointer-events: none;
+  background-size: 12px 12px;
+
   z-index: 1;
 }
 
-/* TEXTURA HOLOGRÁFICA OTIMIZADA + Molduras Douradas por CIMA do efeito de máscara */
+/* Elemento Gráfico 2: TEXTURA HOLOGRÁFICA ESTÁVEL (Isolada da animação) */
 .cabecalho::after {
   content: "";
   position: absolute;
@@ -153,43 +79,56 @@ body {
   right: 14px;
   bottom: 14px;
 
-  /* Mantém as suas cores e reflexos holográficos prediletos */
   background-image:
     linear-gradient(105deg,
       rgba(184, 145, 42, 0.20) 0%,
-      /* Ouro sutil */
       rgba(235, 90, 90, 0.12) 20%,
-      /* Rubi suave */
       rgba(75, 192, 192, 0.12) 40%,
-      /* Ciano suave */
       rgba(255, 235, 180, 0.15) 55%,
-      /* Ouro Branco */
       rgba(150, 60, 255, 0.14) 70%,
-      /* Violeta contido */
       rgba(120, 30, 220, 0.08) 85%,
       transparent 100%),
     linear-gradient(125deg,
       rgba(184, 145, 42, 0.1) 0%,
       rgba(255, 245, 220, 0.05) 35%,
-      rgba(255, 255, 255, 0.20) 45%,
-      /* Feixe de luz metálica polido */
+      rgba(255, 255, 255, 0.12) 45%,
       rgba(255, 245, 220, 0.05) 55%,
       transparent 100%),
     url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im0iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmNWQwIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNiODkxMmEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2MTQ5MWMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBmaWxsPSJ1cmwoI20pIiBmaWxsLW9wYWNpdHk9IjAuMjIiPjxwYXRoIGQ9Ik0xOSA0YTE1IDE1IDAgMCAwLTE1IDE1aDE1em0yIDBhMTUgMTUgMCAwIDEgMTUgMTVIMjF6bS0xNyAxN2ExNSAxNSAwIDAgMCAxNSAxNVYyMXptMTkgMTVhMTUgMTUgMCAwIDAgMTUtMTVIPjF6bS03LTEyYTUgNSAwIDEgMSA1LTVhNSA1IDAgMCAxLTUgNXoiLz48L2c+PC9zdmc+");
 
   background-size: 150% 100%, 100% 100%, 12px 12px;
-  background-repeat: no-repeat, no-repeat, repeat;
-  border-radius: 10px;
-
-  filter:
-    drop-shadow(0px -0.5px 0.5px rgba(255, 255, 255, 0.2)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.55));
+  background-repeat: repeat;
+  border-radius: 8px;
 
   /* A máscara limpa o padrão e o brilho holográfico do lado esquerdo */
-  mask-image: linear-gradient(115deg, transparent 35%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.95) 85%);
-  -webkit-mask-image: linear-gradient(115deg, transparent 35%, rgba(0, 0, 0, 0.3) 55%, rgba(0, 0, 0, 0.95) 85%);
+  mask-image: linear-gradient(115deg, transparent 25%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.95) 85%);
+  -webkit-mask-image: linear-gradient(115deg, transparent 25%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.95) 85%);
 
   pointer-events: none;
   z-index: 2;
+}
+
+/* Executa o efeito Shine sem nenhuma máscara restritiva */
+.cabecalho h1::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+
+  /* Feixe de luz metálico polido isolado */
+  background-image: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.32) 48%, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0.32) 52%, transparent 60%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+
+  pointer-events: none;
+  z-index: 3;
+  /* Renderiza acima do fundo holográfico e abaixo dos textos principais */
+
+  /* Roda a animação de movimento livre de ponta a ponta */
+  animation: shineEsporadico 12s linear infinite;
 }
 
 /* Ajuste de contraste dos textos sobre o fundo preto absoluto */
@@ -199,24 +138,29 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.05;
-  color: #f9e7b9; /* Tom dourado champagne idêntico ao logo do cartão */
+  color: #f9e7b9;
   margin-bottom: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* Camada da Linha Secundária Fantasma (Outline Interno) rodando em Z-INDEX alto para ignorar a máscara */
 .cabecalho h1::before {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  border: 1px solid rgba(184, 146, 42, 0.7);
-  outline: 1px solid rgba(184, 146, 42, 0.4);
-  outline-offset: -5px;
-  border-radius: 10px;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border: 1px solid rgba(184, 146, 42, 1);
+  outline: 1px solid rgba(184, 146, 42, 0.75);
+  outline-offset: -4px;
+
+  border-radius: 8px;
   pointer-events: none;
+
+  /* Brilho externo dourado */
+  box-shadow:
+    inset 0 0 15px 5px rgb(0, 0, 0);
+
   z-index: 4;
 }
 
@@ -227,7 +171,8 @@ body {
   border-radius: 6px;
   background-color: #111;
   border: 1px solid #cfa343;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  outline: 0.5px solid rgba(207, 163, 67, 1);
+  outline-offset: 2px;
   overflow: hidden;
   z-index: 3;
 }
@@ -262,50 +207,48 @@ body {
   display: block;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(207, 163, 67, 0.6), transparent);
+  background: linear-gradient(90deg, rgb(247, 191, 70), transparent);
   margin-top: 14px;
 }
 
 .contato {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: grid;
+  /* Mudado de flex para grid */
+  grid-template-columns: repeat(2, 1fr);
+  /* Cria duas colunas iguais */
+  gap: 10px 24px;
+  /* Espaçamento: 10px vertical, 24px horizontal */
   margin-top: 20px;
 }
 
 .contato li {
-  display: flex;
+  display: inline-flex;
+  /* Garante alinhamento robusto com o ícone */
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-size: 12.5px;
   color: #e4d8c3;
   letter-spacing: 0.3px;
+  white-space: nowrap;
+  /* Evita quebras de linha estranhas no desktop */
 }
 
 .contato li+li::before {
-  content: "";
-  position: absolute;
-  left: -12px;
-  color: #bbb;
+  display: none;
 }
 
+
 .contato a {
-  color: #e4d8c3;
+  color: #e4dec9;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.contato li, .contato a {
-  font-size: 12.5px;
-  color: #e4dec9;
-  letter-spacing: 0.3px;
-  text-decoration: none;
-}
-
 .contato a:hover {
-  color: #e4d8c3;
-  text-decoration: none;
+  color: #f9e7b9;
+  /* Um leve destaque dourado ao passar o mouse */
+  text-decoration: underline;
 }
 
 .dados-pessoais {
@@ -403,7 +346,9 @@ body {
 
 /* ================= ITENS ================= */
 .item {
-  margin-bottom: 22px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
 }
 
 .item:last-child {
@@ -411,75 +356,79 @@ body {
 }
 
 .item-topo {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  /* Separa o título à esquerda e a data rigidamente à direita */
   align-items: baseline;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-bottom: 10px;
+  gap: 16px;
+  margin-bottom: 4px;
 }
 
 .item-topo h3 {
-  font-size: 15.5px;
-  font-weight: 600;
-  color: #2b2621;
-}
-
-.periodo {
-  font-size: 10.5px;
+  font-family: "Playfair Display", Georgia, serif;
+  /* Traz a elegância do cabeçalho para os cargos */
+  font-size: 16px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #8a6d3b;
-  background: #efe6d0;
-  padding: 4px 10px;
-  border-radius: 3px;
-  white-space: nowrap;
-  border: 1px solid #e0d5bd;
-}
-
-.periodo::before {
-  content: "";
-  margin: 0;
+  color: #111111;
+  line-height: 1.3;
 }
 
 .empresa {
   color: #b8912a;
-  /* dourado um pouco mais escuro para leitura */
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+
+.periodo {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  margin-bottom: 8px;
+  color: #8a6d3b;
+  background: transparent;
+  /* Remove o fundo pesado antigo */
+  padding: 0;
+  /* Remove o preenchimento de bloco */
+  border: none;
+  /* Remove a borda antiga */
+  border-bottom: 1.5px solid rgba(184, 145, 42, 0.3);
+  /* Linha sutil decorativa inferior */
+  padding-bottom: 2px;
+  white-space: nowrap;
 }
 
 .item ul {
   list-style: none;
-  margin-top: 6px;
+  margin-top: 4px;
   padding-left: 0;
 }
 
 .item ul li {
   position: relative;
-  padding-left: 16px;
-  margin-bottom: 6px;
-  font-size: 14px;
-  color: #3d3630;
+  padding-left: 18px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #4a433c;
+  /* Tom ligeiramente mais suave para melhor legibilidade no bloco de texto */
   text-align: left;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
+/* Marcador de lista refinado: substitui o traço quadrado por um ponto dourado minimalista */
 .item ul li::before {
   content: "";
   position: absolute;
-  border-radius: 50%;
-  background-color: #c9a227;
-  box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.25);
   left: 4px;
-  top: 10px;
-  width: 6px;
-  height: 1.5px;
-  border-radius: 1px;
+  top: 9px;
+  width: 4px;
+  height: 4px;
+  background-color: #b8912a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(184, 145, 42, 0.15);
 }
 
 /* ================= HABILIDADES ================= */
@@ -656,32 +605,6 @@ body {
     background: linear-gradient(90deg, transparent, #b8912a, transparent);
   }
 
-  /* Contato: centralizado e com URLs quebrando */
-  .contato {
-    align-items: center;
-    margin-top: 16px;
-    gap: 8px;
-  }
-
-  .contato li {
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
-    word-break: break-word;
-    overflow-wrap: anywhere;
-    max-width: 100%;
-  }
-
-  .contato li+li::before {
-    display: none;
-    /* tira o "•" que ficou perdido */
-  }
-
-  .contato a {
-    word-break: break-word;
-    overflow-wrap: anywhere;
-  }
-
   /* Seções: padding interno */
   .secao {
     padding: 0 22px;
@@ -756,6 +679,53 @@ body {
     display: block;
     height: 24px;
   }
+
+  .contato {
+    list-style: none;
+    display: grid;
+    /* Mudado de flex para grid */
+    grid-template-columns: repeat(2, 1fr);
+    /* Cria duas colunas iguais */
+    gap: 10px 24px;
+    /* Espaçamento: 10px vertical, 24px horizontal */
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 560px) {
+  .contato {
+    display: flex;
+    /* Muda de grid para flex vertical */
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alinha os ícones à esquerda para melhor leitura em blocos empilhados */
+    width: 100%;
+    max-width: 320px;
+    /* Mantém o bloco compacto e centralizado na seção */
+    margin: 16px auto 0;
+    /* Centraliza a caixa de contatos inteira no cabeçalho */
+    gap: 10px;
+  }
+
+  .contato li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 12px;
+    white-space: normal;
+    /* Permite a quebra natural apenas se a tela for EXTREMAMENTE pequena */
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    width: 100%;
+  }
+
+  .contato a {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
 }
 
 /* ================= ANIMAÇÕES ================= */
@@ -775,18 +745,18 @@ body {
 
 @keyframes shineEsporadico {
   0% {
-    /* Mantém o feixe escondido na posição inicial */
-    background-position: 200% 0, 0 0, 0 0;
+    /* Começa totalmente escondido além da borda direita */
+    background-position: 150% 0;
   }
 
   20% {
-    /* Faz o feixe cruzar até o outro lado rapidamente (~0.5s) */
-    background-position: -120% 0, 0 0, 0 0;
+    /* Cruza todo o cabeçalho de ponta a ponta indo até o extremo esquerdo */
+    background-position: -150% 0;
   }
 
   100% {
-    /* Segura o feixe estático e invisível até completar o ciclo de 18 segundos */
-    background-position: -120% 0, 0 0, 0 0;
+    /* Permanece invisível até encerrar o ciclo total de animação */
+    background-position: -150% 0;
   }
 }
 
@@ -797,13 +767,11 @@ body {
     border-color: #b8912a;
     /* Dourado original */
     box-shadow:
-      0 8px 24px rgba(0, 0, 0, 0.35),
-      0 2px 6px rgba(0, 0, 0, 0.2),
-      0 4px 20px rgba(184, 145, 42, 0.25),
+      0 0 15px 15px rgba(194, 165, 78, 0.35),
       /* Brilho externo dourado */
-      inset 0 0 15px rgba(194, 165, 78, 0.6),
+      inset 0 0 5px 5px rgba(194, 165, 78, 1),
       /* Camada interna 1 */
-      inset 0 0 50px rgba(194, 165, 78, 0.25);
+      inset 0 0 15px 15px rgba(194, 165, 78, 0.5);
     /* Camada interna 2 */
   }
 
@@ -811,26 +779,22 @@ body {
     border-color: #eb5a5a;
     /* Rubi/Vermelho (puxado do seu gradiente holográfico) */
     box-shadow:
-      0 8px 24px rgba(0, 0, 0, 0.35),
-      0 2px 6px rgba(0, 0, 0, 0.2),
-      0 4px 25px rgba(235, 90, 90, 0.4),
+      0 0 15px 15px rgba(235, 90, 90, 0.35),
       /* Brilho externo rubi forte */
-      inset 0 0 20px rgba(235, 90, 90, 0.7),
+      inset 0 0 5px 5px rgba(235, 90, 90, 1),
       /* Camada interna rubi */
-      inset 0 0 60px rgba(235, 90, 90, 0.3);
+      inset 0 0 15px 15px rgba(235, 90, 90, 0.5);
   }
 
   66% {
     border-color: #b24bc0;
     /* Ciano/Turquesa suave (da sua malha holográfica) */
     box-shadow:
-      0 8px 24px rgba(0, 0, 0, 0.35),
-      0 2px 6px rgba(0, 0, 0, 0.2),
-      0 4px 25px rgba(155, 75, 192, 0.377),
+      0 0 15px 15px rgba(192, 75, 130, 0.35),
       /* Brilho externo ciano forte */
-      inset 0 0 20px rgba(192, 75, 130, 0.7),
+      inset 0 0 5px 5px rgba(192, 75, 130, 1),
       /* Camada interna ciano */
-      inset 0 0 60px rgba(192, 75, 182, 0.329);
+      inset 0 0 15px 15px rgba(192, 75, 182, 0.5);
   }
 }
 
