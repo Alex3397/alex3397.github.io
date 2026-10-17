@@ -573,6 +573,10 @@ body {
     padding: 32px 22px;
     margin: 16px;
     margin-bottom: 24px;
+
+    animation:
+      fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+      bordaGlowMutavel 24s ease-in-out infinite;
   }
 
   .foto {
@@ -589,7 +593,13 @@ body {
     font-size: 30px;
     line-height: 1.1;
     letter-spacing: 0.5px;
+    box-shadow: none !important;
   }
+
+  .cabecalho h1::after {
+  animation: shineEsporadico 12s linear 2,
+  sumirBackground 24s linear forwards;
+}
 
   .cargo {
     font-size: 10px;
@@ -597,7 +607,6 @@ body {
     padding-top: 8px;
   }
 
-  /* Divisor dourado: agora ocupa a largura toda e fica centralizado */
   .info-principal h1+.cargo::after {
     width: 100%;
     max-width: 240px;
@@ -795,6 +804,17 @@ body {
       inset 0 0 5px 5px rgba(192, 75, 130, 1),
       /* Camada interna ciano */
       inset 0 0 15px 15px rgba(192, 75, 182, 0.5);
+  }
+}
+
+@keyframes sumirBackground {
+  0%, 99% {
+    /* Mantém o seu fundo original ativo durante as duas execuções */
+    background-image: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.32) 48%, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0.32) 52%, transparent 60%);
+  }
+  100% {
+    /* Remove o background completamente no último milissegundo */
+    background-image: none;
   }
 }
 
