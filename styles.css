@@ -20,12 +20,43 @@ body {
 
 /* ================= CONTAINER ================= */
 .cv {
+  position: relative; /* Necessário para ancorar o desenho de fundo */
   max-width: 860px;
   margin: 0 auto;
-  background: #efe9dc;
   padding: 48px 56px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(60, 50, 30, 0.06);
+  
+  /* Borda estrutural idêntica à do cabeçalho */
+  border: 1.5px solid #b3862b;
+  background-color: #efe9dc;
+  overflow: hidden; /* Garante que os desenhos não passem das bordas arredondadas */
+}
+
+/* Camada isolada para controlar a transparência da sua imagem de fundo */
+.cv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* O código exato e original da sua imagem de losangos (sem nenhuma alteração) */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsPSIjMWExYTFhIiBmaWxsLW9wYWNpdHk9IjAuNiI+PHBhdGggZD0iTTIwIDBMMTAgMTBMMCAwTDEwLTEwek0yMCA0MEwzMCAzMEw0MCA0MEwzMCA5MHpNMCAyMEwxMCAzMEwwIDQwTC0xMCAzMHpNMzAgMTBMMjAgMjBMMzAgMzBMMzAgMTB6Ii8+PHBhdGggZD0iTTIwIDIwTDEwIDEwTDAgMjBMMTAgMzB6TTQwIDIwTDMwIDEwTDIwIDIwTDMwIDMweiIvPjwvZz48L3N2Zz4=");
+  background-size: 132px 132px;
+  
+  /* Controle total da opacidade: 0.05 deixa o desenho bem suave e invisível sob o texto */
+  opacity: 0.05; 
+  
+  /* Garante que o desenho fique atrás de todos os textos do currículo */
+  z-index: 0; 
+  pointer-events: none;
+}
+
+/* Garante que o conteúdo do currículo fique acima da imagem translúcida */
+.cv > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* ================= CABEÇALHO ================= */
