@@ -15,6 +15,7 @@ body {
   color: #2b2621;
   background-color: #e8e2d5;
   -webkit-font-smoothing: antialiased;
+  padding: 20px;
 }
 
 /* ================= CONTAINER ================= */
@@ -23,7 +24,7 @@ body {
   margin: 0 auto;
   background: #efe9dc;
   padding: 48px 56px;
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: 0 4px 20px rgba(60, 50, 30, 0.06);
 }
 
