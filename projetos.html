@@ -8,8 +8,8 @@
   <link rel="stylesheet" type="text/css" href="styles.css?v=15"> 
 </head>
 <body class="corpo">
-  <div class="moldura">
-    <div class="cv">
+  <div class="moldura projetos-md">
+    <div class="cv projetos-cv">
       
       <header class="secao">
         <h2>Documentos e Projetos</h2>
@@ -20,8 +20,10 @@
       <main class="secao">
         <ul class="lista-links">
           <!-- O "javascript:void(0)" impede a página de recarregar, e o "mudarPDF" faz a mágica -->
-          <li><a href="javascript:void(0)" onclick="mudarPDF('pdfs/Brasil Ecommerce - Analise de Produtos e Pedidos.pdf')">Brasil Ecommerce - Analise de Produtos e Pedidos</a></li>
-          <li><a href="javascript:void(0)" onclick="mudarPDF('pdfs/Open Finance - Analise Financeira.pdf')">Open Finance - Analise Financeira</a></li>
+          <li class="desktop"><a href="javascript:void(0)" onclick="mudarPDF('pdfs/Brasil Ecommerce - Analise de Produtos e Pedidos.pdf')">Brasil Ecommerce - Analise de Produtos e Pedidos</a></li>
+          <li class="desktop"><a href="javascript:void(0)" onclick="mudarPDF('pdfs/Open Finance - Analise Financeira.pdf')">Open Finance - Analise Financeira</a></li>
+          <li class="mobile"><a href="pdfs/Brasil Ecommerce - Analise de Produtos e Pedidos.pdf" target="_blank" class="btn-download">Brasil Ecommerce - Analise de Produtos e Pedidos</a></li>
+          <li class="mobile"><a href="pdfs/Open Finance - Analise Financeira.pdf" target="_blank" class="btn-download">Open Finance - Analise Financeira</a></li>
         </ul>
       </main>
 
