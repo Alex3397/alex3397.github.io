@@ -667,11 +667,12 @@ body {
   }
 
   .moldura {
-    padding: 12px;
+    padding: 3px;
+    border-radius: 0px;
   }
 
   .cv {
-    padding: 12px;
+    padding: 3px;
   }
 
   /* Cabeçalho: empilha vertical */
