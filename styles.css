@@ -681,7 +681,7 @@ body {
     align-items: center;
     text-align: center;
     gap: 20px;
-    padding: 32px 22px;
+    padding: 30px 10px;
     margin: 8px;
     margin-bottom: 24px;
 
@@ -720,8 +720,8 @@ body {
   }
 
   .cargo {
-    font-size: 8px;
-    letter-spacing: 2.5px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
     padding-top: 8px;
   }
 
@@ -800,15 +800,14 @@ body {
 
 @media (max-width: 685px) {
   .contato {
-    display: flex;
+    display: grid;
     /* Muda de grid para flex vertical */
     flex-direction: column;
     align-items: flex-start;
     /* Alinha os ícones à esquerda para melhor leitura em blocos empilhados */
     width: 100%;
-    max-width: 320px;
     /* Mantém o bloco compacto e centralizado na seção */
-    margin: 16px auto 0;
+    margin: 16px 0 0;
     /* Centraliza a caixa de contatos inteira no cabeçalho */
     gap: 10px;
   }
@@ -818,7 +817,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    font-size: 12px;
+    font-size: 8px;
     white-space: normal;
     /* Permite a quebra natural apenas se a tela for EXTREMAMENTE pequena */
     word-break: break-word;
