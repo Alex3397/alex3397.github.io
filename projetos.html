@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Projetos & PDFs</title>
+  <!-- Vincula o mesmo arquivo de CSS que você já possui -->
+  <link rel="stylesheet" type="text/css" href="styles.css?v=11"> 
+</head>
+<body class="corpo">
+  <div class="moldura">
+    <div class="cv">
+      
+      <header class="secao">
+        <h2>Documentos e Projetos</h2>
+        <p>Clique em um dos botões abaixo para abrir a visualização direta do documento.</p>
+      </header>
+
+      <!-- Botões de seleção -->
+      <main class="secao">
+        <ul class="lista-links">
+          <!-- O "javascript:void(0)" impede a página de recarregar, e o "mudarPDF" faz a mágica -->
+          <li><a href="javascript:void(0)" onclick="mudarPDF('pdfs/Brasil Ecommerce - Analise de Produtos e Pedidos.pdf')">Brasil Ecommerce - Analise de Produtos e Pedidos</a></li>
+          <li><a href="javascript:void(0)" onclick="mudarPDF('pdfs/Open Finance - Analise Financeira.pdf')">Open Finance - Analise Financeira</a></li>
+        </ul>
+      </main>
+
+      <!-- Container do Preview do PDF -->
+      <section class="secao container-preview">
+        <h2>Visualização do Documento</h2>
+        <div class="moldura-pdf">
+          <!-- O iframe carrega o primeiro PDF por padrão -->
+          <iframe id="preview-pdf" src="pdfs/Brasil Ecommerce - Analise de Produtos e Pedidos.pdf#toolbar=0&navpanes=0" type="application/pdf"></iframe>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Pequeno script para alternar os arquivos dinamicamente -->
+  <script>
+  function mudarPDF(caminhoDoArquivo) {
+    // Adiciona os parâmetros que dizem ao navegador para esconder as barras
+    const parametros = "#toolbar=0&navpanes=0";
+    document.getElementById('preview-pdf').src = caminhoDoArquivo + parametros;
+  }
+</script>
+</body>
+</html>
